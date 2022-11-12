@@ -1,0 +1,19 @@
+import random
+
+number_chosen = random.randint(1, 100)
+print(number_chosen)
+
+
+print("Hello User! You've decided to play the Number Guessing Game. \nI've chosen a number, try and guess it!")
+
+number = 0
+
+while number != number_chosen:
+    print("choose a number between 1 - 100: ")
+    number = int(input())
+    print("your number is: " + str(number))
+    if number > number_chosen:
+        print("you've chosen the wrong number.\nThe actual number is lower than the number you've chosen.")
+    elif number < number_chosen:
+        print("you've chosen the wrong number.\nThe actual number is higher than the number you've chosen.")
+print("You chose the right answer!")
